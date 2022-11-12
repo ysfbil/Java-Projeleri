@@ -22,7 +22,7 @@ public class UsAlma {
                 double a=1.3;
                 double b=2.8;
                System.out.println("usAl = " + usAl(a,b));
-               System.out.println("Math.pow = " + Math.pow(a,b));  
+//               System.out.println("Math.pow = " + Math.pow(a,b));  
 //        System.out.println("ln(3.3) = " + lnNewton(3.3));
 //        System.out.println("tamUstAl = " + tamUstAl(3,3.2)); 
 //        System.out.println("ondalikliUs = " + ondalikliUs(3,0.3));
