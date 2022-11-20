@@ -1,0 +1,4 @@
+koddaki package komutunu sildik
+java -jar mesaj_kutusu.jar
+jar cvfm mesaj_kutusu.jar Manifest.txt mesaj_kutusu.class mesaj_kutusu$MyAction.class
+java -jar mesaj_kutusu.jar

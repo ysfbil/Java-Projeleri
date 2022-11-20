@@ -1,0 +1,30 @@
+#class binary dosyasını oluşturma (Çalışmayı derleme):
+
+java yüklü mü diye bakıyoruz
+java -version 
+
+Dosyayı compile edip <dosyaAdi>.class bin dosyasını oluşturuyoruz.
+javac SelamunAleykum.java
+
+class dosyasını çalıştırıyoruz.
+java SelamunAleykum
+
+java SelamunAleykum.java yazarsak da dosya önce derlenip sonra çalıştırılır. Ancak daha uzun sürer.
+
+# jar dosyası oluşturma:
+
+Manifest.txt dosyası oluşturup. İçerisine main-class: SelamunAleykum yazıyoruz ve 2 kez enter yapıyoruz. (Önce derlenip class dosyası oluşturuldu)
+
+jar cfvm SelamunAleykum.jar Manifest.txt SelamunAleykum.class img 
+
+img adında bir klasörümüz var için de resim var. (Yoksa komuda img eklenemez)
+jar dosyasını çalıştırmak için :
+
+java -jar SelamunAleykum.jar
+
+jar dosyası aslında bir arşiv dosyası gibidir ve içerisinde tüm dosyalar ve class ön derleme yapılmış dosyalar bulunur.
+
+jar dosyasının içeriğini listelemek istersek:
+jar tf SelamunAleykum.jar
+
+

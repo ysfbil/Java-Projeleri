@@ -1,0 +1,8 @@
+shift.class derlenmiş dosya oluşturmak için
+javac shift.java 
+
+çalıştırılabilir jar dosyası için
+jar -cvfe shift.jar shift shift.class
+
+jar dosyasını çalışmtırmak için
+java -jar shift.jar

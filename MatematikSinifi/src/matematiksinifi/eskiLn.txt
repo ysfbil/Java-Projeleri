@@ -1,0 +1,23 @@
+public static double Ln(double x) {
+        
+        
+        double ln2=0.69314718055994530941723212145818;
+        int x_int=(int)x-1;
+        
+        if (x_int<0) return Double.NaN;
+        
+        if (x_int==0) return 0;
+        
+        if (x_int+1==2) return ln2;
+        
+        if (x_int<=0) x_int=1;
+        double sonuc=0;
+        
+              
+        for (int i = 1; i < 10; i++) {
+            sonuc+=ciftMi(i+1)*(1/aUssu(x-1,i))*aUssu(-x_int+x,i)/i;
+        }
+
+        
+        return sonuc+Ln(x-1);
+    }
