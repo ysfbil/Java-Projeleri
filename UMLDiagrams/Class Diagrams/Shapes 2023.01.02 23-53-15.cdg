@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Shapes">
   <ClassDiagramComponents>
-    <Class name="Circle" package="Shapes" visibility="publıc" xPosition="20.0" yPosition="20.0">
+    <Class name="Circle" package="Shapes" visibility="publıc" xPosition="1192.0" yPosition="486.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="publıc">
@@ -19,7 +19,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Line" package="Shapes" visibility="publıc" xPosition="320.0" yPosition="20.0">
+    <Class name="DoluDikdortgen" package="Shapes" visibility="publıc" xPosition="316.0" yPosition="486.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="publıc">
@@ -36,7 +36,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Rechtangle" package="Shapes" visibility="publıc" xPosition="620.0" yPosition="20.0">
+    <Class name="FilledCircle" package="Shapes" visibility="publıc" xPosition="615.0" yPosition="654.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="publıc">
@@ -53,7 +53,41 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Shape" package="Shapes" visibility="publıc" xPosition="268.0" yPosition="270.0">
+    <Class name="Line" package="Shapes" visibility="publıc" xPosition="628.0" yPosition="486.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Rechtangle" package="Shapes" visibility="publıc" xPosition="896.0" yPosition="486.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Shape" package="Shapes" visibility="publıc" xPosition="733.0" yPosition="51.0">
       <Fields>
         <Field name="g" type="Graphics" visibility="prıvate"/>
         <Field name="g2d" type="Graphics2D" visibility="prıvate"/>
@@ -101,7 +135,9 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <IsRelation name="is" source="Shapes.Line" target="Shapes.Shape"/>
-    <IsRelation name="is" source="Shapes.Rechtangle" target="Shapes.Shape"/>
     <IsRelation name="is" source="Shapes.Circle" target="Shapes.Shape"/>
+    <IsRelation name="is" source="Shapes.Rechtangle" target="Shapes.Shape"/>
+    <IsRelation name="is" source="Shapes.DoluDikdortgen" target="Shapes.Shape"/>
+    <IsRelation name="is" source="Shapes.FilledCircle" target="Shapes.Line"/>
   </ClassDiagramRelations>
 </ClassDiagram>
