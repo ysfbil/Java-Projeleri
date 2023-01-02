@@ -10,7 +10,6 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,19 +18,6 @@ import java.util.logging.Logger;
  * @author ysfbil
  */
 class GenUUID {
-
-    public void generateUUIDJava() {
-        //java'nın standar uuid sınıfı
-        UUID uuid = UUID.randomUUID();
-        System.out.println("UUID generated - " + uuid);
-        System.out.println("UUID Version - " + uuid.version());
-
-        byte[] bayt = {'y', 'u', 's', 'u', 'f'}; //"Yusuf".getBytes() //veya bu şekilde
-
-        uuid = UUID.nameUUIDFromBytes(bayt);
-        System.out.println("UUID generated - " + uuid);
-        System.out.println("UUID Version - " + uuid.version());
-    }
 
     private String getMac() { //mac adresini öğreniyoruz. hata alınırsa rastgele sayı ile karşılık veriyorz.
         InetAddress localHost;
@@ -80,30 +66,27 @@ class GenUUID {
         return normalization(output, 17);
     }
 
-   
     private String embedding(String input) {
-     //gelen metni 3'erli parçalara ayırıp rastgele karıştırıyoruz.
-        String output="";
+        //gelen metni 3'erli parçalara ayırıp rastgele karıştırıyoruz.
+        String output = "";
         String[] parcalar = new String[17];
 
-       ArrayList<Integer> indisler=new ArrayList<>();
-       Random rnd=new Random();
-       
-       while (indisler.size()<17)
-       {
-           int sayi=rnd.nextInt(17);
-           if (!indisler.contains(sayi))
-               indisler.add(sayi);
-       }
-       
-       
+        ArrayList<Integer> indisler = new ArrayList<>();
+        Random rnd = new Random();
+
+        while (indisler.size() < 17) {
+            int sayi = rnd.nextInt(17);
+            if (!indisler.contains(sayi)) {
+                indisler.add(sayi);
+            }
+        }
+
         for (int i = 0; i < 51; i += 3) {
             parcalar[indisler.get(i / 3)] = input.substring(i, i + 3);
         }
-        
-        for (int i=0;i<17;i++)
-        {
-            output+=parcalar[i];
+
+        for (int i = 0; i < 17; i++) {
+            output += parcalar[i];
         }
         return output;
     }
@@ -111,7 +94,7 @@ class GenUUID {
     public void generateMyUUID() {
         Random rnd = new Random();
         String sayi = "" + Math.abs(rnd.nextLong());
-        String username = ""+toAscii(System.getProperty("user.name")).hashCode();
+        String username = "" + toAscii(System.getProperty("user.name")).hashCode();
         String macaddress = getMac();
         String nanoTime = "" + System.nanoTime();
 
@@ -123,7 +106,6 @@ public class MyUUIDClass {
 
     public static void main(String[] args) {
         GenUUID uuid = new GenUUID();
-       // uuid.generateUUIDJava();
-        uuid.generateMyUUID();      
+        uuid.generateMyUUID();
     }
 }
