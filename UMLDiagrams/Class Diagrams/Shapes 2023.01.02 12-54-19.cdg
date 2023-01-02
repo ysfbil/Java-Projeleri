@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Shapes">
+  <ClassDiagramComponents>
+    <Class name="Circle" package="Shapes" visibility="publıc" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Line" package="Shapes" visibility="publıc" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Rechtangle" package="Shapes" visibility="publıc" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Shape" package="Shapes" visibility="publıc" xPosition="268.0" yPosition="270.0">
+      <Fields>
+        <Field name="g" type="Graphics" visibility="prıvate"/>
+        <Field name="g2d" type="Graphics2D" visibility="prıvate"/>
+        <Field name="dotColor" type="Color" visibility="prıvate"/>
+        <Field name="ikiNoktali" type="boolean" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+          <Argument type="boolean" name="ikiNoktali"/>
+        </Constructor>
+        <Constructor visibility="publıc">
+          <Argument type="Graphics" name="g"/>
+          <Argument type="Color" name="dotColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setColor" returnType="void" visibility="publıc">
+          <Argument type="Color" name="dotColor"/>
+        </Method>
+        <Method name="ikiNoktali" returnType="boolean" visibility="publıc"/>
+        <Method name="draw" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+        <Method name="drawPoint" returnType="void" visibility="publıc">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="drawVerticalLine" returnType="void" visibility="publıc">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y1"/>
+          <Argument type="int" name="y2"/>
+        </Method>
+        <Method name="drawHorizontalLine" returnType="void" visibility="publıc">
+          <Argument type="int" name="x1"/>
+          <Argument type="int" name="x2"/>
+          <Argument type="int" name="y"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Shapes.Line" target="Shapes.Shape"/>
+    <IsRelation name="is" source="Shapes.Rechtangle" target="Shapes.Shape"/>
+    <IsRelation name="is" source="Shapes.Circle" target="Shapes.Shape"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,8 +1,29 @@
+Bu komutlar package tanımlanmamışsa geçerlidir.
 shift.class derlenmiş dosya oluşturmak için
 javac shift.java 
 
+Çalıştırmak için:
+java shift
+
+
+--------------------------
+
+Packager tanımlıylsa 
+shift.class derlenmiş dosyası için
+javac uygulama_odevi1/shift.java
+
+çalıştırmak için:
+java uygulama_odevi1/shift
+
+--------------
+package yokken:
 çalıştırılabilir jar dosyası için
 jar -cvfe shift.jar shift shift.class
 
 jar dosyasını çalışmtırmak için
+java -jar shift.jar
+
+package varken: (Tüm işlemler bir üst klasörde yapılacak)
+jar -cvfe shift.jar uygulama_odevi1/shift uygulama_odevi1/shift.class
+
 java -jar shift.jar

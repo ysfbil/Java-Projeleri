@@ -1,4 +1,17 @@
 koddaki package komutunu sildik
-java -jar mesaj_kutusu.jar
+javac mesaj_kutusu.java
 jar cvfm mesaj_kutusu.jar Manifest.txt mesaj_kutusu.class mesaj_kutusu$MyAction.class
 java -jar mesaj_kutusu.jar
+
+package komutunu silmeden:
+derleme:
+javac user_interface/mesaj_kutusu.java
+
+çalıştırma:
+java user_interface/mesaj_kutusu
+
+jar yapma:
+jar -cvfe mesajkutusu.jar user_interface/mesaj_kutusu user_interface/mesaj_kutusu.class user_interface/mesaj_kutusu$MyAction.class
+
+jar çalıştırma:
+java -jar mesajkutusu.jar

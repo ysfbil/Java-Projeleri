@@ -11,6 +11,7 @@ package matematiksinifi;
 public class MyMath {
 
     public static double Mutlak(double x) {
+        
         if (x < 0) {
             return x * -1;
         } else {
@@ -71,12 +72,19 @@ public class MyMath {
 
         return lna;
     }
+    
+    public static boolean tamSayiMi(double x)
+    {
+        int x_int = Mutlak((int) x);
+        return (Mutlak(x) - x_int) == 0.0;
+    }
 
     public static double eUssu(double x) {
         double e = 2.7182818284590452353602874713527;
         int x_int = Mutlak((int) x);
 
-        if ((Mutlak(x) - x_int) == 0.0) {
+        //üs tamsayı durumu
+        if (tamSayiMi(x)) {
             if (x > 0) {
                 return aUssu(e, x_int); //üs poz tam sayı ise normal kuvvetini alıyor
             } else {
@@ -84,16 +92,20 @@ public class MyMath {
             }
         }
 
+        //üs 0 ile 2 arasında (doğrudan taylora uygun) durumu
         if (x <= 2 && x > 0) {
             return eUssuK2(x); //üs pozitif ve <=2 ise taylor serisinden cevap veriyoruz
         }
+        
+        //üs ondalıklı ve 0-2 aralığında değil durumu
         //e^x i e^b.lna'ya dönüştürüyoruz. b=x_int lna=x/b, a'yı buluyorz. e^x=b^a olur.
-        double lna = Mutlak(x) / x_int;
+        int b=x_int;
+        double lna = Mutlak(x) / b; 
         double a = eUssuK2(lna);
         if (x > 0) {
-            return aUssu(a, x_int); //x pozitif
+            return aUssu(a, b); //x pozitif
         } else {
-            return 1 / aUssu(a, x_int); //x negatif ise tersini alıyoruz
+            return 1 / aUssu(a, b); //x negatif ise tersini alıyoruz
         }
     }
 

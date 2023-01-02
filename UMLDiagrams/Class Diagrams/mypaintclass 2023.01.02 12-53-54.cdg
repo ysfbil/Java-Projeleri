@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="mypaintclass">
+  <ClassDiagramComponents>
+    <Class name="MyPaintClass" package="mypaintclass" visibility="publıc" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="publıc" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyPaintFormClass" package="mypaintclass" visibility="publıc" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="mouseHandler" type="MyPaintFormClass.MouseHandler" visibility="package"/>
+        <Field name="p1" type="Point" visibility="package"/>
+        <Field name="p2" type="Point" visibility="package"/>
+        <Field name="sekil" type="Shape" visibility="package"/>
+        <Field name="ilkNokta" type="boolean" visibility="package"/>
+        <Field name="dotColor" type="Color" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton8" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jButton9" type="javax.swing.JButton" visibility="prıvate"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="prıvate"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="prıvate"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="drawShape" returnType="void" visibility="prıvate"/>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton9ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton8ActionPerformed" returnType="void" visibility="prıvate">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="publıc" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

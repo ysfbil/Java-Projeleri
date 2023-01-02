@@ -6,7 +6,7 @@
 package Sunu4;
 
 /**
- *
+ *Metod çağrısında parametre olarak
  * @author ysfbil
  */
 public class ThisAsFormal {

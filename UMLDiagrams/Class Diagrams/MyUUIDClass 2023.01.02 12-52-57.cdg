@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="MyUUIDClass">
+  <ClassDiagramComponents>
+    <Class name="GenUUID" package="myuuid" visibility="publıc" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="generateUUIDJava" returnType="void" visibility="publıc"/>
+        <Method name="getMac" returnType="String" visibility="prıvate"/>
+        <Method name="normalization" returnType="String" visibility="prıvate">
+          <Argument type="String" name="input"/>
+          <Argument type="int" name="size"/>
+        </Method>
+        <Method name="toAscii" returnType="String" visibility="prıvate">
+          <Argument type="String" name="input"/>
+        </Method>
+        <Method name="embedding" returnType="String" visibility="prıvate">
+          <Argument type="String" name="input"/>
+        </Method>
+        <Method name="generateMyUUID" returnType="void" visibility="publıc"/>
+      </Methods>
+    </Class>
+    <Class name="MyUUIDClass" package="myuuid" visibility="publıc" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="publıc" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
